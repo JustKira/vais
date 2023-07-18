@@ -70,8 +70,11 @@ const VirtualFieldProbing = () => {
               {bulletPoints.map((point, id) => {
                 if (id >= 3) {
                   return (
-                    <div className="flex items-center gap-2" key={id}>
-                      <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                    <div
+                      className="flex items-center gap-4 font-medium"
+                      key={id}
+                    >
+                      <FaLeaf className="flex-shrink-0 text-4xl text-vais-pri" />
                       <BulletPointIcon text={point} />
                     </div>
                   );
@@ -83,8 +86,11 @@ const VirtualFieldProbing = () => {
               {bulletPoints.map((point, id) => {
                 if (id < 3) {
                   return (
-                    <div className="flex items-center gap-2" key={id}>
-                      <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                    <div
+                      className="flex items-center gap-4 font-medium"
+                      key={id}
+                    >
+                      <FaLeaf className="flex-shrink-0 text-4xl text-vais-pri" />
                       <BulletPointIcon text={point} />
                     </div>
                   );
@@ -115,59 +121,64 @@ const VirtualFieldProbing = () => {
         <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
       </BasicSection>
 
-      <div className="flex items-center justify-center w-full">
-        <div className="container relative flex overflow-x-hidden">
-          <div className="flex py-12 animate-marquee whitespace-nowrap">
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Environmental Monitoring"} />
+      <div className="flex flex-col items-center justify-center w-full gap-12">
+        <BasicSectionTitle>
+          Additional VFP Applications and Industries
+        </BasicSectionTitle>
+        <div className="w-full py-8 text-2xl bg-dotted-spacing-2 bg-dotted-vais-pri/25">
+          <div className="relative flex overflow-x-hidden bg-white ">
+            <div className="flex py-2 animate-marquee whitespace-nowrap">
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Environmental Monitoring"} />
+              </div>
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Sustainability"} />
+              </div>
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Socioeconomic Mapping"} />
+              </div>
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Security and Surveillance"} />
+              </div>
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Oil and Gas"} />
+              </div>
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Global SaaS products"} />
+              </div>
             </div>
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Sustainability"} />
-            </div>
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Socioeconomic Mapping"} />
-            </div>
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Security and Surveillance"} />
-            </div>
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Oil and Gas"} />
-            </div>
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Global SaaS products"} />
-            </div>
-          </div>
 
-          <div className="absolute top-0 flex py-12 animate-marquee2 whitespace-nowrap">
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Environmental Monitoring"} />
-            </div>
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Sustainability"} />
-            </div>
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Socioeconomic Mapping"} />
-            </div>
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Security and Surveillance"} />
-            </div>
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Oil and Gas"} />
-            </div>
-            <div className="flex items-center gap-2 mx-4">
-              <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
-              <BulletPointIcon text={"Global SaaS products"} />
+            <div className="absolute top-0 flex py-2 animate-marquee2 whitespace-nowrap">
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Environmental Monitoring"} />
+              </div>
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Sustainability"} />
+              </div>
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Socioeconomic Mapping"} />
+              </div>
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Security and Surveillance"} />
+              </div>
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Oil and Gas"} />
+              </div>
+              <div className="flex items-center gap-2 mx-4">
+                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+                <BulletPointIcon text={"Global SaaS products"} />
+              </div>
             </div>
           </div>
         </div>
