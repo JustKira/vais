@@ -1,4 +1,4 @@
-import { AiFillLinkedin, AiOutlineMail } from "react-icons/Ai";
+// import { AiFillLinkedin, AiOutlineMail } from "react-icons/Ai";
 const Footer = () => {
   return <></>;
 };
