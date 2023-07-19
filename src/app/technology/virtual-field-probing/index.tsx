@@ -78,11 +78,13 @@ const VirtualFieldProbing = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col gap-8 bg-white pb-14">
+      <div className="bg-white">
         <HeroSection background="/temp.png">
           <HeroTitle>Pioneering Technology</HeroTitle>
           <HeroTitle secondary>VAIS Virtual Field Probing (VFP)</HeroTitle>
         </HeroSection>
+      </div>
+      <div className="flex flex-col gap-8 bg-white pb-14">
         <BasicSection>
           <BasicSectionContent>
             <BasicSectionTitle>
@@ -174,66 +176,68 @@ const VirtualFieldProbing = () => {
           <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
         </BasicSection>
 
-        <div className="flex flex-col items-center justify-center w-full gap-4 py-12 bg-white">
-          <BasicSectionTitle className="text-center">
-            Additional VFP Applications and Industries
-          </BasicSectionTitle>
-          <div className="w-full py-6 text-2xl">
-            <div className="relative flex overflow-x-hidden ">
-              <div className="absolute top-0 bottom-0 z-50 w-1/3 h-full bg-gradient-to-r from-white to-transparent"></div>
-              <div className="absolute top-0 bottom-0 right-0 z-50 w-1/3 h-full bg-gradient-to-l from-white to-transparent"></div>
-              <div className="flex py-2 animate-marquee whitespace-nowrap">
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+        <div className="relative flex flex-col items-center justify-center w-full gap-4 py-10 bg-dotted-spacing-3 bg-dotted-vais-pri/50">
+          <div className="absolute top-0 bottom-0 left-0 z-50 w-1/3 h-full bg-gradient-to-r from-white to-transparent"></div>
+          <div className="absolute top-0 bottom-0 right-0 z-50 w-1/3 h-full bg-gradient-to-l from-white to-transparent"></div>
+          <div className="flex flex-col items-center justify-center w-full gap-4 py-4 bg-white">
+            <BasicSectionTitle className="text-center">
+              Additional VFP Applications and Industries
+            </BasicSectionTitle>
+            <div className="w-full py-6 text-2xl">
+              <div className="relative flex overflow-x-hidden ">
+                <div className="flex py-2 animate-marquee whitespace-nowrap">
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
 
-                  <BulletPointIcon text={"Environmental Monitoring"} />
+                    <BulletPointIcon text={"Environmental Monitoring"} />
+                  </div>
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Sustainability"} />
+                  </div>
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Socioeconomic Mapping"} />
+                  </div>
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Security and Surveillance"} />
+                  </div>
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Oil and Gas"} />
+                  </div>
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Global SaaS products"} />
+                  </div>
                 </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Sustainability"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Socioeconomic Mapping"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Security and Surveillance"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Oil and Gas"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Global SaaS products"} />
-                </div>
-              </div>
 
-              <div className="absolute top-0 flex py-2 animate-marquee2 whitespace-nowrap">
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Environmental Monitoring"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Sustainability"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Socioeconomic Mapping"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Security and Surveillance"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Oil and Gas"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Global SaaS products"} />
+                <div className="absolute top-0 flex py-2 animate-marquee2 whitespace-nowrap">
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Environmental Monitoring"} />
+                  </div>
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Sustainability"} />
+                  </div>
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Socioeconomic Mapping"} />
+                  </div>
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Security and Surveillance"} />
+                  </div>
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Oil and Gas"} />
+                  </div>
+                  <div className="flex items-center gap-4 mx-10 font-light">
+                    <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                    <BulletPointIcon text={"Global SaaS products"} />
+                  </div>
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ export default {
       },
       colors: {
         vais: {
-          pri: "#1189C8",
+          pri: "#0f7bb4",
           sec: "#054465",
           off: "#F2EFEC",
         },

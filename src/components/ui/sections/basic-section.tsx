@@ -69,7 +69,7 @@ const BasicSectionTitle: React.FC<BasicSectionTitleProps> = ({
   return (
     <h1
       className={cn(
-        `text-2xl md:text-3xl xl:text-4xl font-light text-vais-sec text-start`,
+        `text-2xl md:text-3xl xl:text-4xl font-light text-vais-pri text-start`,
         className
       )}
       {...rest}

@@ -85,41 +85,43 @@ const RootPage = () => {
 
   return (
     <main className="flex flex-col">
-      {Headers[hsp]}
-      <BasicSection>
-        <BasicSectionContent>
-          <BasicSectionTitle>
-            What is Virtual Field Probing (VFP)
-          </BasicSectionTitle>
-          <BasicSectionDescription>
-            Virtual Field Probing (VFP) is our novel, patent-pending
-            satellite-enabled sensing technology where sophisticated artificial
-            intelligence/deep learning models are applied to the plethora of
-            complex
-          </BasicSectionDescription>
-          <Button className="font-light w-fit" variant={"outline"}>
-            Learn more
-          </Button>
-        </BasicSectionContent>
-        <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
-      </BasicSection>
-      <BasicSection reverse>
-        <BasicSectionContent>
-          <BasicSectionTitle>
-            What is Virtual Field Probing (VFP)
-          </BasicSectionTitle>
-          <BasicSectionDescription>
-            Virtual Field Probing (VFP) is our novel, patent-pending
-            satellite-enabled sensing technology where sophisticated artificial
-            intelligence/deep learning models are applied to the plethora of
-            complex
-          </BasicSectionDescription>
-          <Button className="font-light w-fit" variant={"outline"}>
-            Learn more
-          </Button>
-        </BasicSectionContent>
-        <BasicSectionImage reverse src="/bg.png" alt="vfp showcase image" />
-      </BasicSection>
+      <div className="bg-white">{Headers[hsp]}</div>
+      <div className="flex flex-col gap-2 pb-4 bg-white">
+        <BasicSection>
+          <BasicSectionContent>
+            <BasicSectionTitle>
+              What is Virtual Field Probing (VFP)
+            </BasicSectionTitle>
+            <BasicSectionDescription>
+              Virtual Field Probing (VFP) is our novel, patent-pending
+              satellite-enabled sensing technology where sophisticated
+              artificial intelligence/deep learning models are applied to the
+              plethora of complex
+            </BasicSectionDescription>
+            <Button className="font-light w-fit" variant={"outline"}>
+              Learn more
+            </Button>
+          </BasicSectionContent>
+          <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
+        </BasicSection>
+        <BasicSection reverse>
+          <BasicSectionContent>
+            <BasicSectionTitle>
+              What is Virtual Field Probing (VFP)
+            </BasicSectionTitle>
+            <BasicSectionDescription>
+              Virtual Field Probing (VFP) is our novel, patent-pending
+              satellite-enabled sensing technology where sophisticated
+              artificial intelligence/deep learning models are applied to the
+              plethora of complex
+            </BasicSectionDescription>
+            <Button className="font-light w-fit" variant={"outline"}>
+              Learn more
+            </Button>
+          </BasicSectionContent>
+          <BasicSectionImage reverse src="/bg.png" alt="vfp showcase image" />
+        </BasicSection>
+      </div>
       <ParallaxSection src="/temp.png">
         <ParralexSectionTitle>Lorem ipsum dolor sitx</ParralexSectionTitle>
         <ParralexSectionDescription>
@@ -130,23 +132,25 @@ const RootPage = () => {
         </ParralexSectionDescription>
         <Button variant={"white"}>Read more</Button>
       </ParallaxSection>
-      <BasicSection reverse className="pb-20">
-        <BasicSectionContent>
-          <BasicSectionTitle>
-            What is Virtual Field Probing (VFP)
-          </BasicSectionTitle>
-          <BasicSectionDescription>
-            Virtual Field Probing (VFP) is our novel, patent-pending
-            satellite-enabled sensing technology where sophisticated artificial
-            intelligence/deep learning models are applied to the plethora of
-            complex
-          </BasicSectionDescription>
-          <Button className="font-light w-fit" variant={"outline"}>
-            Learn more
-          </Button>
-        </BasicSectionContent>
-        <BasicSectionImage reverse src="/bg.png" alt="vfp showcase image" />
-      </BasicSection>
+      <div className="bg-white">
+        <BasicSection reverse className="mb-8">
+          <BasicSectionContent>
+            <BasicSectionTitle>
+              What is Virtual Field Probing (VFP)
+            </BasicSectionTitle>
+            <BasicSectionDescription>
+              Virtual Field Probing (VFP) is our novel, patent-pending
+              satellite-enabled sensing technology where sophisticated
+              artificial intelligence/deep learning models are applied to the
+              plethora of complex
+            </BasicSectionDescription>
+            <Button className="font-light w-fit" variant={"outline"}>
+              Learn more
+            </Button>
+          </BasicSectionContent>
+          <BasicSectionImage reverse src="/bg.png" alt="vfp showcase image" />
+        </BasicSection>
+      </div>
       <div className="bg-white">
         <section className="flex flex-col items-center justify-center w-full py-12 bg-dotted-spacing-3 bg-dotted-vais-pri/25">
           <div className="container flex flex-col p-4 bg-white">
