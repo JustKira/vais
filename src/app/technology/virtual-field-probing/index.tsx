@@ -19,35 +19,35 @@ import { MdCrisisAlert } from "react-icons/md";
 const VirtualFieldProbing = () => {
   const bulletPoints = [
     {
-      i: <WiTrain className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />,
+      i: <WiTrain className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />,
       t: "ZERO in-field equipment or ground devices needed",
     },
     {
       i: (
-        <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+        <RiDashboard3Fill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
       ),
       t: "Weather resilient and not hindered by rain or cloud coverage",
     },
     {
       i: (
-        <MdCrisisAlert className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+        <MdCrisisAlert className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
       ),
       t: "Provides observations with sensor-level accuracy",
     },
     {
       i: (
-        <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+        <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
       ),
       t: "Low-cost and highly-scalable",
     },
     {
       i: (
-        <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+        <RiWaterFlashFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
       ),
       t: "Enables sensor-free surface and sub-surface exploration",
     },
     {
-      i: <FaWarehouse className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />,
+      i: <FaWarehouse className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />,
       t: "Works 365 days/year in any place on planet Earth",
     },
   ];
