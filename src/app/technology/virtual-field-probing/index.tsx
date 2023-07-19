@@ -7,8 +7,9 @@ import {
   BasicSectionTitle,
 } from "../../../components/ui/sections/basic-section";
 
-import { FaLeaf, FaWarehouse } from "react-icons/fa";
-import { WiTrain } from "react-icons/wi";
+import { FaLeaf } from "react-icons/fa";
+import { BsFillBrightnessHighFill, BsFillGearFill } from "react-icons/bs";
+
 import {
   RiWaterFlashFill,
   RiDashboard3Fill,
@@ -23,7 +24,9 @@ import {
 const VirtualFieldProbing = () => {
   const bulletPoints = [
     {
-      i: <WiTrain className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />,
+      i: (
+        <BsFillGearFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
+      ),
       t: "ZERO in-field equipment or ground devices needed",
     },
     {
@@ -51,7 +54,9 @@ const VirtualFieldProbing = () => {
       t: "Enables sensor-free surface and sub-surface exploration",
     },
     {
-      i: <FaWarehouse className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />,
+      i: (
+        <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
+      ),
       t: "Works 365 days/year in any place on planet Earth",
     },
   ];
@@ -170,7 +175,7 @@ const VirtualFieldProbing = () => {
         </BasicSection>
 
         <div className="flex flex-col items-center justify-center w-full gap-4 py-12 bg-white">
-          <BasicSectionTitle>
+          <BasicSectionTitle className="text-center">
             Additional VFP Applications and Industries
           </BasicSectionTitle>
           <div className="w-full py-6 text-2xl">
@@ -179,7 +184,7 @@ const VirtualFieldProbing = () => {
               <div className="absolute top-0 bottom-0 right-0 z-50 w-1/3 h-full bg-gradient-to-l from-white to-transparent"></div>
               <div className="flex py-2 animate-marquee whitespace-nowrap">
                 <div className="flex items-center gap-4 mx-10 font-light">
-                  <FaWarehouse className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                  <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
 
                   <BulletPointIcon text={"Environmental Monitoring"} />
                 </div>
@@ -200,14 +205,14 @@ const VirtualFieldProbing = () => {
                   <BulletPointIcon text={"Oil and Gas"} />
                 </div>
                 <div className="flex items-center gap-4 mx-10 font-light">
-                  <FaWarehouse className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                  <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                   <BulletPointIcon text={"Global SaaS products"} />
                 </div>
               </div>
 
               <div className="absolute top-0 flex py-2 animate-marquee2 whitespace-nowrap">
                 <div className="flex items-center gap-4 mx-10 font-light">
-                  <FaWarehouse className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                  <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                   <BulletPointIcon text={"Environmental Monitoring"} />
                 </div>
                 <div className="flex items-center gap-4 mx-10 font-light">
@@ -227,7 +232,7 @@ const VirtualFieldProbing = () => {
                   <BulletPointIcon text={"Oil and Gas"} />
                 </div>
                 <div className="flex items-center gap-4 mx-10 font-light">
-                  <FaWarehouse className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                  <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                   <BulletPointIcon text={"Global SaaS products"} />
                 </div>
               </div>

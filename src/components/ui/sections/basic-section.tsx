@@ -69,7 +69,7 @@ const BasicSectionTitle: React.FC<BasicSectionTitleProps> = ({
   return (
     <h1
       className={cn(
-        `text-4xl font-light text-vais-pri text-center md:text-start`,
+        `text-2xl md:text-3xl xl:text-4xl font-light text-vais-pri text-start`,
         className
       )}
       {...rest}
@@ -92,7 +92,7 @@ const BasicSectionDescription: React.FC<BasicSectionDescriptionProps> = ({
   return (
     <p
       className={cn(
-        `text-base leading-loose text-gray-500 text-justify`,
+        `text-sm xl:text-base leading-loose text-gray-500 text-start md:text-justify`,
         className
       )}
       {...rest}
