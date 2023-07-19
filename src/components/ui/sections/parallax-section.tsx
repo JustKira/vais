@@ -54,7 +54,10 @@ const ParralexSectionTitle: React.FC<ParralexSectionTitleProps> = ({
   ...rest
 }) => {
   return (
-    <h1 className={cn(`text-5xl font-light text-center`, className)} {...rest}>
+    <h1
+      className={cn(`text-3xl xl:text-5xl font-light text-center`, className)}
+      {...rest}
+    >
       {children}
     </h1>
   );
@@ -72,7 +75,10 @@ const ParralexSectionDescription: React.FC<ParralexSectionDescriptionProps> = ({
 }) => {
   return (
     <p
-      className={cn(`text-base text-center font-extralight`, className)}
+      className={cn(
+        `text-sm xl:text-base text-center font-extralight`,
+        className
+      )}
       {...rest}
     >
       {children}

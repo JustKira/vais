@@ -60,7 +60,7 @@ const RootPage = () => {
       </HeroSection>
     </>,
     <>
-      <HeroSection fullHeight background="/bg.png">
+      <HeroSection fullHeight background="/temp.png">
         <HeroTitle>Welcome to Climate-Smart Agriculture</HeroTitle>
         <HeroTitle secondary>
           FarmGuru: A Comprehensive Climate-Smart Ag Platform
