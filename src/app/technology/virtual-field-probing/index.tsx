@@ -93,7 +93,7 @@ const VirtualFieldProbing = () => {
         <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
       </BasicSection>
 
-      <div className="flex items-center justify-center w-full">
+      <div className="flex items-center justify-center w-full text-xl">
         <div className="container flex flex-col items-center xl:items-start">
           <BasicSectionTitle>VFP Features</BasicSectionTitle>
           <BasicSection className="justify-start gap-12 text-gray-600">
