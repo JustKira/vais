@@ -21,61 +21,9 @@ import {
   ParralexSectionDescription,
   ParralexSectionTitle,
 } from "../../../components/ui/sections/parallax-section";
+import { NewsBar } from "../../../components/ui/newsbar";
+import { IconContainer } from "../../../components/ui/icons";
 const VirtualFieldProbing = () => {
-  const bulletPoints = [
-    {
-      i: (
-        <BsFillGearFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "ZERO in-field equipment or ground devices needed",
-    },
-    {
-      i: (
-        <RiDashboard3Fill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "Weather resilient and not hindered by rain or cloud coverage",
-    },
-    {
-      i: (
-        <MdCrisisAlert className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "Provides observations with sensor-level accuracy",
-    },
-    {
-      i: (
-        <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "Low-cost and highly-scalable",
-    },
-    {
-      i: (
-        <RiWaterFlashFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "Enables sensor-free surface and sub-surface exploration",
-    },
-    {
-      i: (
-        <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "Works 365 days/year in any place on planet Earth",
-    },
-  ];
-
-  const BulletPointIcon = ({
-    icon,
-    text,
-  }: {
-    icon?: JSX.Element;
-    text: string;
-  }) => {
-    return (
-      <div className={"flex gap-4 items-center"}>
-        {icon}
-        {text}
-      </div>
-    );
-  };
-
   return (
     <div className="flex flex-col">
       <div className="bg-white">
@@ -111,35 +59,45 @@ const VirtualFieldProbing = () => {
           <div className="container flex flex-col items-center xl:items-start">
             <BasicSectionTitle>VFP Features</BasicSectionTitle>
             <BasicSection className="justify-start gap-12 text-gray-600">
-              <div className="flex flex-col w-3/4 gap-12 xl:w-full">
-                {bulletPoints.map((point, id) => {
-                  if (id >= 3) {
-                    return (
-                      <div
-                        className="flex items-center gap-4 font-medium"
-                        key={id}
-                      >
-                        <BulletPointIcon text={point.t} icon={point.i} />
-                      </div>
-                    );
+              <div className="flex flex-col w-3/4 gap-12 font-medium xl:w-full">
+                <IconContainer
+                  icon={
+                    <BsFillGearFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
                   }
-                  return <></>;
-                })}
+                  text="ZERO in-field equipment or ground devices needed"
+                />
+                <IconContainer
+                  icon={
+                    <RiDashboard3Fill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
+                  }
+                  text="Weather resilient and not hindered by rain or cloud coverage"
+                />
+                <IconContainer
+                  icon={
+                    <MdCrisisAlert className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
+                  }
+                  text="Provides observations with sensor-level accuracy"
+                />
               </div>
               <div className="flex flex-col w-3/4 gap-12 xl:w-full">
-                {bulletPoints.map((point, id) => {
-                  if (id < 3) {
-                    return (
-                      <div
-                        className="flex items-center gap-4 font-medium"
-                        key={id}
-                      >
-                        <BulletPointIcon text={point.t} icon={point.i} />
-                      </div>
-                    );
+                <IconContainer
+                  icon={
+                    <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
                   }
-                  return <></>;
-                })}
+                  text="Low-cost and highly-scalable"
+                />
+                <IconContainer
+                  icon={
+                    <RiWaterFlashFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
+                  }
+                  text="Enables sensor-free surface and sub-surface exploration"
+                />
+                <IconContainer
+                  icon={
+                    <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
+                  }
+                  text="Works 365 days/year in any place on planet Earth"
+                />
               </div>
             </BasicSection>
           </div>
@@ -176,72 +134,51 @@ const VirtualFieldProbing = () => {
           <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
         </BasicSection>
 
-        <div className="relative flex flex-col items-center justify-center w-full gap-4 py-10 bg-dotted-spacing-3 bg-dotted-vais-pri/50">
-          <div className="absolute top-0 bottom-0 left-0 z-50 w-1/3 h-full bg-gradient-to-r from-white to-transparent"></div>
-          <div className="absolute top-0 bottom-0 right-0 z-50 w-1/3 h-full bg-gradient-to-l from-white to-transparent"></div>
-          <div className="flex flex-col items-center justify-center w-full gap-4 py-4 bg-white">
-            <BasicSectionTitle className="text-center">
-              Additional VFP Applications and Industries
-            </BasicSectionTitle>
-            <div className="w-full py-6 text-2xl">
-              <div className="relative flex overflow-x-hidden ">
-                <div className="flex py-2 animate-marquee whitespace-nowrap">
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-
-                    <BulletPointIcon text={"Environmental Monitoring"} />
-                  </div>
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Sustainability"} />
-                  </div>
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Socioeconomic Mapping"} />
-                  </div>
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Security and Surveillance"} />
-                  </div>
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Oil and Gas"} />
-                  </div>
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Global SaaS products"} />
-                  </div>
-                </div>
-
-                <div className="absolute top-0 flex py-2 animate-marquee2 whitespace-nowrap">
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Environmental Monitoring"} />
-                  </div>
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Sustainability"} />
-                  </div>
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Socioeconomic Mapping"} />
-                  </div>
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Security and Surveillance"} />
-                  </div>
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Oil and Gas"} />
-                  </div>
-                  <div className="flex items-center gap-4 mx-10 font-light">
-                    <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                    <BulletPointIcon text={"Global SaaS products"} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="font-light">
+          <NewsBar text={"Additional VFP Applications and Industries"}>
+            <IconContainer
+              className="mx-20"
+              icon={
+                <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Environmental Monitoring"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Sustainability"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Socioeconomic Mapping"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Security and Surveillance"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Oil and Gas"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Global SaaS products"
+            />
+          </NewsBar>
         </div>
       </div>
     </div>

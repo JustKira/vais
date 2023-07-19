@@ -6,6 +6,8 @@ import RootPage from "./app/root";
 import Layout from "./app/layout";
 import VirtualFieldProbing from "./app/technology/virtual-field-probing";
 import SoilMoister from "./app/technology/soil-moisture";
+import FarmGuru from "./app/product/farmguru";
+import About from "./app/company/about";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,7 +24,14 @@ const router = createBrowserRouter([
           { path: "soil-moister", element: <SoilMoister /> },
         ],
       },
-
+      {
+        path: "products",
+        children: [{ path: "farmguru", element: <FarmGuru /> }],
+      },
+      {
+        path: "company",
+        children: [{ path: "about", element: <About /> }],
+      },
       { path: "news", element: <></> },
     ],
   },

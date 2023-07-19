@@ -80,6 +80,7 @@ const Navbar = () => {
 
   React.useEffect(() => {
     setMve(false);
+    setHover(false);
   }, [location]);
 
   const NavbarRender = () => {

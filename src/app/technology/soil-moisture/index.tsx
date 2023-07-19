@@ -21,68 +21,18 @@ import {
   ParralexSectionDescription,
   ParralexSectionTitle,
 } from "../../../components/ui/sections/parallax-section";
+import { IconContainer } from "../../../components/ui/icons";
+import { NewsBar } from "../../../components/ui/newsbar";
 const SoilMoister = () => {
-  const bulletPoints = [
-    {
-      i: (
-        <BsFillGearFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "ZERO in-field equipment or ground devices needed",
-    },
-    {
-      i: (
-        <RiDashboard3Fill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "Weather resilient and not hindered by rain or cloud coverage",
-    },
-    {
-      i: (
-        <MdCrisisAlert className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "Provides observations with sensor-level accuracy",
-    },
-    {
-      i: (
-        <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "Low-cost and highly-scalable",
-    },
-    {
-      i: (
-        <RiWaterFlashFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "Enables sensor-free surface and sub-surface exploration",
-    },
-    {
-      i: (
-        <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
-      ),
-      t: "Works 365 days/year in any place on planet Earth",
-    },
-  ];
-
-  const BulletPointIcon = ({
-    icon,
-    text,
-  }: {
-    icon?: JSX.Element;
-    text: string;
-  }) => {
-    return (
-      <div className={"flex gap-4 items-center"}>
-        {icon}
-        {text}
-      </div>
-    );
-  };
-
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col gap-8 bg-white pb-14">
+      <div className="bg-white">
         <HeroSection background="/temp.png">
           <HeroTitle>From Surface Level to Rootzone</HeroTitle>
           <HeroTitle secondary>Soil Moisture Monitoring Technology</HeroTitle>
         </HeroSection>
+      </div>
+      <div className="flex flex-col gap-8 bg-white pb-14">
         <BasicSection>
           <BasicSectionContent>
             <BasicSectionTitle>Surface Soil Moisture Sensing</BasicSectionTitle>
@@ -131,35 +81,45 @@ const SoilMoister = () => {
               Soil Moisture Monitoring (SMM) Technology Features
             </BasicSectionTitle>
             <BasicSection className="justify-start gap-12 text-gray-600">
-              <div className="flex flex-col w-3/4 gap-12 xl:w-full">
-                {bulletPoints.map((point, id) => {
-                  if (id >= 3) {
-                    return (
-                      <div
-                        className="flex items-center gap-4 font-medium"
-                        key={id}
-                      >
-                        <BulletPointIcon text={point.t} icon={point.i} />
-                      </div>
-                    );
+              <div className="flex flex-col w-3/4 gap-12 font-medium xl:w-full">
+                <IconContainer
+                  icon={
+                    <BsFillGearFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
                   }
-                  return <></>;
-                })}
+                  text="Rootzone moisture estimation accuracy with <4.0% RMS error"
+                />
+                <IconContainer
+                  icon={
+                    <RiDashboard3Fill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
+                  }
+                  text="Rootzone moisture data for depths up to 100 centimeters"
+                />
+                <IconContainer
+                  icon={
+                    <MdCrisisAlert className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
+                  }
+                  text="Historical soil moisture data (selected regions)"
+                />
               </div>
               <div className="flex flex-col w-3/4 gap-12 xl:w-full">
-                {bulletPoints.map((point, id) => {
-                  if (id < 3) {
-                    return (
-                      <div
-                        className="flex items-center gap-4 font-medium"
-                        key={id}
-                      >
-                        <BulletPointIcon text={point.t} icon={point.i} />
-                      </div>
-                    );
+                <IconContainer
+                  icon={
+                    <BsFillGearFill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
                   }
-                  return <></>;
-                })}
+                  text="Surface-level moisture data at up to 10-meter resolution"
+                />
+                <IconContainer
+                  icon={
+                    <RiDashboard3Fill className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
+                  }
+                  text="Regular data updates up to hourly rootzone moisture information"
+                />
+                <IconContainer
+                  icon={
+                    <MdCrisisAlert className="flex-shrink-0 mx-2 text-5xl text-vais-pri" />
+                  }
+                  text="Continuous operations and global coverage"
+                />
               </div>
             </BasicSection>
           </div>
@@ -198,70 +158,66 @@ const SoilMoister = () => {
           <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
         </BasicSection>
 
-        <div className="flex flex-col items-center justify-center w-full gap-4 py-12 bg-white">
-          <BasicSectionTitle className="text-center">
-            Additional SMM Technology Applications and Industries
-          </BasicSectionTitle>
-          <div className="w-full py-6 text-2xl">
-            <div className="relative flex overflow-x-hidden ">
-              <div className="absolute top-0 bottom-0 z-50 w-1/3 h-full bg-gradient-to-r from-white to-transparent"></div>
-              <div className="absolute top-0 bottom-0 right-0 z-50 w-1/3 h-full bg-gradient-to-l from-white to-transparent"></div>
-              <div className="flex py-2 animate-marquee whitespace-nowrap">
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+        <div className="font-light">
+          <NewsBar text={"Global Soil Moisture Engine Applications"}>
+            <IconContainer
+              className="mx-20"
+              icon={
+                <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Irrigation scheduling and yield predication"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Drought monitoring and impact assessment"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Water quota allocation and consumption monitoring"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Flood prediction and monitoring"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Regional and global food security programs"
+            />
 
-                  <BulletPointIcon text={"Environmental Monitoring"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Sustainability"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Socioeconomic Mapping"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Security and Surveillance"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Oil and Gas"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Global SaaS products"} />
-                </div>
-              </div>
-
-              <div className="absolute top-0 flex py-2 animate-marquee2 whitespace-nowrap">
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Environmental Monitoring"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Sustainability"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Socioeconomic Mapping"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Security and Surveillance"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Oil and Gas"} />
-                </div>
-                <div className="flex items-center gap-4 mx-10 font-light">
-                  <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
-                  <BulletPointIcon text={"Global SaaS products"} />
-                </div>
-              </div>
-            </div>
-          </div>
+            <IconContainer
+              className="mx-20"
+              icon={
+                <BsFillGearFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Agricultural commodity trading"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Crop insurance programs (especially for smallholders)"
+            />
+            <IconContainer
+              className="mx-20"
+              icon={
+                <BsFillBrightnessHighFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+              }
+              text="Climate studies and projections"
+            />
+          </NewsBar>
         </div>
       </div>
     </div>
