@@ -1,6 +1,59 @@
+import { CgDetailsMore } from "react-icons/cg";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "usehooks-ts";
+
+interface NavbarLinks {
+  name: string;
+  link?: string;
+  children?: NavbarLinks[];
+}
+
+const NavbarLinks: NavbarLinks[] = [
+  {
+    name: "Technology",
+    children: [
+      {
+        name: "virtual-field-probing",
+        link: "/technology/virtual-field-probing",
+      },
+    ],
+  },
+  {
+    name: "Product",
+    children: [
+      {
+        name: "farmguru",
+        link: "/products/farmguru",
+      },
+    ],
+  },
+  {
+    name: "News",
+    link: "/news",
+  },
+  {
+    name: "Company",
+    children: [
+      {
+        name: "about",
+        link: "/company/about",
+      },
+      {
+        name: "career",
+        link: "/company/career",
+      },
+      {
+        name: "contact",
+        link: "/company/contact",
+      },
+    ],
+  },
+];
+
 const Navbar = () => {
+  const [mve, setMve] = useState<boolean>(false);
+  const matches = useMediaQuery("(min-width: 640px)");
   const [scrolledPastThreshold, setScrolledPastThreshold] =
     React.useState(false);
   const handleScroll = () => {
@@ -20,30 +73,70 @@ const Navbar = () => {
     };
   }, []);
 
-  const NavLinkDropdown = ({
-    children,
-    buttonname,
-  }: {
-    children: React.ReactNode;
-    buttonname: string;
-  }) => {
-    const [hover, setHover] = useState<boolean>(false);
+  const NavbarRender = () => {
     return (
-      <div
-        className="relative px-4 mt-8"
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >
-        <h1 className="text-xl font-medium">{buttonname}</h1>
-        {hover ? (
-          <div
-            onMouseEnter={() => setHover(true)}
-            className="absolute bottom-0 flex flex-col gap-4 p-4 mt-8  min-w-[200px] text-base text-gray-700 translate-y-full bg-white"
-          >
-            {children}
-          </div>
+      <div className="flex gap-12">
+        {NavbarLinks.map((navlink, id) => {
+          const [extend, setExtend] = useState<boolean>(false);
+          return (
+            <div className="relative" key={id}>
+              <h1
+                className="text-xl font-medium"
+                onClick={() => setExtend(!extend)}
+              >
+                {navlink?.name}
+              </h1>
+              <div>
+                {extend ? (
+                  <ul className="absolute bottom-0 px-2 py-4 translate-y-full bg-white whitespace-nowrap">
+                    {navlink.children?.map((_navlink, id) => (
+                      <>
+                        {_navlink.link ? (
+                          <li key={id}>
+                            <Link to={_navlink.link}>{_navlink.name}</Link>
+                          </li>
+                        ) : (
+                          <></>
+                        )}
+                      </>
+                    ))}
+                  </ul>
+                ) : (
+                  <></>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const MobileNavbarRender = ({ navlink }: { navlink: NavbarLinks }) => {
+    const [extend, setExtend] = useState<boolean>(false);
+    return (
+      <div className="flex flex-col px-2 py-2">
+        {navlink.link ? (
+          <Link to={navlink.link} className={`text-xl font-light`}>
+            {navlink.name}
+          </Link>
         ) : (
+          <h1
+            className={`text-xl font-medium`}
+            onClick={() => setExtend(!extend)}
+          >
+            {navlink.name}
+          </h1>
+        )}
+
+        {navlink.link ? (
           <></>
+        ) : (
+          <div className={`${extend ? "block px-4" : "hidden"}`}>
+            {navlink.children?.map((_navlink, id) => (
+              <MobileNavbarRender key={id} navlink={_navlink} />
+            ))}
+          </div>
         )}
       </div>
     );
@@ -55,80 +148,40 @@ const Navbar = () => {
       onMouseLeave={() => setHover(false)}
       className={`fixed top-0 flex justify-center w-full z-50 ${
         scrolledPastThreshold || hover
-          ? " bg-white drop-shadow-md delay-75"
-          : " bg-transparent"
+          ? " bg-white drop-shadow-md delay-75 text-black"
+          : " bg-transparent text-white"
       }  transition-all duration-300 `}
     >
-      <div className="container flex justify-between transition-all duration-300 ">
+      <div className="container relative flex items-center justify-between">
         <Link to={"/"}>
           <div className="p-2 bg-white rounded-b-sm w-fit">
             <img alt="VAIS Logo" className="h-16" src="/logo.png" />
           </div>
         </Link>
-        <ul
-          className={`flex space-x-4 gap-4 h-full  text-base font-medium capitalize transition-all duration-150 ${
-            scrolledPastThreshold || hover ? " text-black" : " text-white"
-          }`}
-        >
-          <li>
-            <NavLinkDropdown buttonname="Technology">
-              <Link
-                className="whitespace-nowrap hover:text-vais-pri"
-                to={"/technology/virtual-field-probing"}
-              >
-                virtual field probing
-              </Link>
-              <Link
-                className="whitespace-nowrap hover:text-vais-pri"
-                to={"/technology/soil-moisture-engine"}
-              >
-                soil moisture engine
-              </Link>
-            </NavLinkDropdown>
-          </li>
-          <li>
-            <NavLinkDropdown buttonname="Products">
-              <Link
-                className="whitespace-nowrap hover:text-vais-pri"
-                to={"/technology/virtual-field-probing"}
-              >
-                FarmGuru
-              </Link>
-            </NavLinkDropdown>
-          </li>
-          <li>
-            <div className="relative px-4 mt-8">
-              <Link
-                className="text-lg font-medium whitespace-nowrap hover:text-vais-pri"
-                to={"/news"}
-              >
-                News
-              </Link>
+
+        {matches ? (
+          <>
+            <NavbarRender />
+          </>
+        ) : (
+          <>
+            <div className="">
+              <CgDetailsMore
+                className="text-3xl"
+                onClick={() => setMve(!mve)}
+              />
+              {mve ? (
+                <div className="absolute bottom-0 left-0 w-full px-4 py-4 translate-y-full bg-white rounded-b-lg">
+                  {NavbarLinks.map((navlink, id) => (
+                    <MobileNavbarRender key={id} navlink={navlink} />
+                  ))}
+                </div>
+              ) : (
+                <></>
+              )}
             </div>
-          </li>
-          <li>
-            <NavLinkDropdown buttonname="Company">
-              <Link
-                className="whitespace-nowrap hover:text-vais-pri"
-                to={"/about "}
-              >
-                About
-              </Link>
-              <Link
-                className="whitespace-nowrap hover:text-vais-pri"
-                to={"/career"}
-              >
-                Career
-              </Link>
-              <Link
-                className="whitespace-nowrap hover:text-vais-pri"
-                to={"/contact"}
-              >
-                Contact
-              </Link>
-            </NavLinkDropdown>
-          </li>
-        </ul>
+          </>
+        )}
       </div>
     </nav>
   );

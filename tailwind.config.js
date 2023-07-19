@@ -14,8 +14,8 @@ export default {
         },
       },
       animation: {
-        marquee: "marquee 45s linear infinite",
-        marquee2: "marquee2 45s linear infinite",
+        marquee: "marquee 180s linear infinite",
+        marquee2: "marquee2 180s linear infinite",
       },
       keyframes: {
         marquee: {

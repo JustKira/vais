@@ -67,7 +67,7 @@ const RootPage = () => {
         </HeroTitle>
         <div onMouseEnter={handleHover} onMouseLeave={handleHoverEnd}>
           <Button>Learn more</Button>
-        </div>{" "}
+        </div>
         <HeaderSlider />
       </HeroSection>
     </>,
@@ -77,7 +77,7 @@ const RootPage = () => {
         <HeroTitle secondary>Soil Moisture Monitoring Technology</HeroTitle>
         <div onMouseEnter={handleHover} onMouseLeave={handleHoverEnd}>
           <Button>Learn more</Button>
-        </div>{" "}
+        </div>
         <HeaderSlider />
       </HeroSection>
     </>,
@@ -118,7 +118,7 @@ const RootPage = () => {
             Learn more
           </Button>
         </BasicSectionContent>
-        <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
+        <BasicSectionImage reverse src="/bg.png" alt="vfp showcase image" />
       </BasicSection>
       <ParallaxSection src="/temp.png">
         <ParralexSectionTitle>Lorem ipsum dolor sitx</ParralexSectionTitle>
@@ -130,8 +130,7 @@ const RootPage = () => {
         </ParralexSectionDescription>
         <Button variant={"white"}>Read more</Button>
       </ParallaxSection>
-      <BasicSection className="pb-24">
-        <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
+      <BasicSection reverse className="pb-20">
         <BasicSectionContent>
           <BasicSectionTitle>
             What is Virtual Field Probing (VFP)
@@ -146,6 +145,7 @@ const RootPage = () => {
             Learn more
           </Button>
         </BasicSectionContent>
+        <BasicSectionImage reverse src="/bg.png" alt="vfp showcase image" />
       </BasicSection>
       <div className="bg-white">
         <section className="flex flex-col items-center justify-center w-full py-12 bg-dotted-spacing-3 bg-dotted-vais-pri/25">

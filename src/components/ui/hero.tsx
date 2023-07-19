@@ -57,13 +57,16 @@ const HeroTitle: React.FC<HeroHeader1Props> = ({
 }) => {
   if (secondary) {
     return (
-      <h2 className={cn(`text-3xl font-light`, className)} {...rest}>
+      <h2
+        className={cn(`text-3xl font-light text-center`, className)}
+        {...rest}
+      >
         {children}
       </h2>
     );
   }
   return (
-    <h1 className={cn(`text-5xl font-medium`, className)} {...rest}>
+    <h1 className={cn(`text-5xl font-medium text-center`, className)} {...rest}>
       {children}
     </h1>
   );

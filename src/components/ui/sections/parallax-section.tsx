@@ -48,7 +48,7 @@ const ParralexSectionTitle: React.FC<ParralexSectionTitleProps> = ({
   ...rest
 }) => {
   return (
-    <h1 className={cn(`text-5xl font-light `, className)} {...rest}>
+    <h1 className={cn(`text-5xl font-light text-center`, className)} {...rest}>
       {children}
     </h1>
   );

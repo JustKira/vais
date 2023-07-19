@@ -8,34 +8,65 @@ import {
   BasicSectionTitle,
 } from "../../../components/ui/sections/basic-section";
 
-import { FaLeaf } from "react-icons/fa";
+import { FaLeaf, FaWarehouse } from "react-icons/fa";
+import { WiTrain } from "react-icons/wi";
+import { RiWaterFlashFill } from "react-icons/ri";
+import {
+  AiFillAlert,
+  AiFillDollarCircle,
+  AiFillDashboard,
+} from "react-icons/AI";
 const VirtualFieldProbing = () => {
   const bulletPoints = [
-    "ZERO in-field equipment or ground devices needed",
-    "Weather resilient and not hindered by rain or cloud coverage",
-    "Provides observations with sensor-level accuracy",
-    "Low-cost and highly-scalable",
-    "Enables sensor-free surface and sub-surface exploration",
-    "Works 365 days/year in any place on planet Earth",
+    {
+      i: <WiTrain className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />,
+      t: "ZERO in-field equipment or ground devices needed",
+    },
+    {
+      i: (
+        <AiFillDashboard className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+      ),
+      t: "Weather resilient and not hindered by rain or cloud coverage",
+    },
+    {
+      i: <AiFillAlert className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />,
+      t: "Provides observations with sensor-level accuracy",
+    },
+    {
+      i: (
+        <AiFillDollarCircle className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+      ),
+      t: "Low-cost and highly-scalable",
+    },
+    {
+      i: (
+        <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+      ),
+      t: "Enables sensor-free surface and sub-surface exploration",
+    },
+    {
+      i: <FaWarehouse className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />,
+      t: "Works 365 days/year in any place on planet Earth",
+    },
   ];
 
   const BulletPointIcon = ({
-    // icon,
+    icon,
     text,
   }: {
-    // icon: JSX.Element;
+    icon?: JSX.Element;
     text: string;
   }) => {
     return (
-      <div className={"flex gap-4"}>
-        {/* {icon}  */}
+      <div className={"flex gap-4 items-center"}>
+        {icon}
         {text}
       </div>
     );
   };
 
   return (
-    <main className="flex flex-col gap-12">
+    <main className="flex flex-col space-y-8">
       <HeroSection background="/temp.png">
         <HeroTitle>Pioneering Technology</HeroTitle>
         <HeroTitle secondary>VAIS Virtual Field Probing (VFP)</HeroTitle>
@@ -74,8 +105,7 @@ const VirtualFieldProbing = () => {
                       className="flex items-center gap-4 font-medium"
                       key={id}
                     >
-                      <FaLeaf className="flex-shrink-0 text-4xl text-vais-pri" />
-                      <BulletPointIcon text={point} />
+                      <BulletPointIcon text={point.t} icon={point.i} />
                     </div>
                   );
                 }
@@ -90,8 +120,7 @@ const VirtualFieldProbing = () => {
                       className="flex items-center gap-4 font-medium"
                       key={id}
                     >
-                      <FaLeaf className="flex-shrink-0 text-4xl text-vais-pri" />
-                      <BulletPointIcon text={point} />
+                      <BulletPointIcon text={point.t} icon={point.i} />
                     </div>
                   );
                 }
@@ -121,62 +150,66 @@ const VirtualFieldProbing = () => {
         <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
       </BasicSection>
 
-      <div className="flex flex-col items-center justify-center w-full gap-12">
+      <div className="flex flex-col items-center justify-center w-full gap-4">
         <BasicSectionTitle>
           Additional VFP Applications and Industries
         </BasicSectionTitle>
-        <div className="w-full py-8 text-2xl bg-dotted-spacing-2 bg-dotted-vais-pri/25">
-          <div className="relative flex overflow-x-hidden bg-white ">
+        <div className="w-full py-2 text-2xl">
+          <div className="relative flex overflow-x-hidden ">
+            <div className="absolute top-0 bottom-0 z-50 w-1/3 h-full bg-gradient-to-r from-white to-transparent"></div>
+            <div className="absolute top-0 bottom-0 right-0 z-50 w-1/3 h-full bg-gradient-to-l from-white to-transparent"></div>
             <div className="flex py-2 animate-marquee whitespace-nowrap">
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <FaWarehouse className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                ,
                 <BulletPointIcon text={"Environmental Monitoring"} />
               </div>
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <AiFillDashboard className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Sustainability"} />
               </div>
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Socioeconomic Mapping"} />
               </div>
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <AiFillDollarCircle className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Security and Surveillance"} />
               </div>
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Oil and Gas"} />
               </div>
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <FaWarehouse className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Global SaaS products"} />
               </div>
             </div>
 
             <div className="absolute top-0 flex py-2 animate-marquee2 whitespace-nowrap">
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <FaWarehouse className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                ,
                 <BulletPointIcon text={"Environmental Monitoring"} />
               </div>
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <AiFillDashboard className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Sustainability"} />
               </div>
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <FaLeaf className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Socioeconomic Mapping"} />
               </div>
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <AiFillDollarCircle className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Security and Surveillance"} />
               </div>
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <RiWaterFlashFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Oil and Gas"} />
               </div>
-              <div className="flex items-center gap-2 mx-4">
-                <FaLeaf className="flex-shrink-0 text-3xl text-vais-pri" />
+              <div className="flex items-center gap-4 mx-10 font-light">
+                <FaWarehouse className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Global SaaS products"} />
               </div>
             </div>

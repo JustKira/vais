@@ -68,7 +68,10 @@ const BasicSectionTitle: React.FC<BasicSectionTitleProps> = ({
 }) => {
   return (
     <h1
-      className={cn(`text-4xl font-light text-vais-pri `, className)}
+      className={cn(
+        `text-4xl font-light text-vais-pri text-center md:text-start`,
+        className
+      )}
       {...rest}
     >
       {children}
@@ -103,20 +106,29 @@ interface BasicSectionImageProps
   extends React.DetailedHTMLProps<
     React.ImgHTMLAttributes<HTMLImageElement>,
     HTMLImageElement
-  > {}
+  > {
+  reverse?: boolean;
+}
 const BasicSectionImage = forwardRef<HTMLImageElement, BasicSectionImageProps>(
-  ({ children, className, ...rest }, ref) => {
+  ({ children, className, reverse, ...rest }, ref) => {
     return (
-      <img
-        ref={ref}
-        className={cn(
-          `xl:w-[500px] xl:h-[350px] w-3/4 object-cover object-center text-base leading-loose text-gray-500`,
-          className
-        )}
-        {...rest}
-      >
-        {children}
-      </img>
+      <div className="relative flex items-center justify-center">
+        <img
+          ref={ref}
+          className={cn(
+            `relative z-10 xl:w-[500px] xl:h-[350px] w-3/4 object-cover object-center text-base leading-loose text-gray-500`,
+            className
+          )}
+          {...rest}
+        >
+          {children}
+        </img>
+        <div
+          className={`xl:w-[500px] xl:h-[350px] w-3/4 absolute top-0 left-0 ${
+            reverse ? "translate-x-6" : "-translate-x-6"
+          } translate-y-6 bg-dotted-spacing-2 bg-dotted-vais-pri/50`}
+        />
+      </div>
     );
   }
 );
