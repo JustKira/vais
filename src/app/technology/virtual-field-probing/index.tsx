@@ -10,12 +10,12 @@ import {
 
 import { FaLeaf, FaWarehouse } from "react-icons/fa";
 import { WiTrain } from "react-icons/wi";
-import { RiWaterFlashFill } from "react-icons/ri";
 import {
-  AiFillAlert,
-  AiFillDollarCircle,
-  AiFillDashboard,
-} from "react-icons/AI";
+  RiWaterFlashFill,
+  RiDashboard3Fill,
+  RiMoneyDollarCircleFill,
+} from "react-icons/ri";
+import { MdCrisisAlert } from "react-icons/md";
 const VirtualFieldProbing = () => {
   const bulletPoints = [
     {
@@ -24,17 +24,19 @@ const VirtualFieldProbing = () => {
     },
     {
       i: (
-        <AiFillDashboard className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+        <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
       ),
       t: "Weather resilient and not hindered by rain or cloud coverage",
     },
     {
-      i: <AiFillAlert className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />,
+      i: (
+        <MdCrisisAlert className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+      ),
       t: "Provides observations with sensor-level accuracy",
     },
     {
       i: (
-        <AiFillDollarCircle className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+        <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
       ),
       t: "Low-cost and highly-scalable",
     },
@@ -165,7 +167,7 @@ const VirtualFieldProbing = () => {
                 <BulletPointIcon text={"Environmental Monitoring"} />
               </div>
               <div className="flex items-center gap-4 mx-10 font-light">
-                <AiFillDashboard className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Sustainability"} />
               </div>
               <div className="flex items-center gap-4 mx-10 font-light">
@@ -173,7 +175,7 @@ const VirtualFieldProbing = () => {
                 <BulletPointIcon text={"Socioeconomic Mapping"} />
               </div>
               <div className="flex items-center gap-4 mx-10 font-light">
-                <AiFillDollarCircle className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Security and Surveillance"} />
               </div>
               <div className="flex items-center gap-4 mx-10 font-light">
@@ -193,7 +195,7 @@ const VirtualFieldProbing = () => {
                 <BulletPointIcon text={"Environmental Monitoring"} />
               </div>
               <div className="flex items-center gap-4 mx-10 font-light">
-                <AiFillDashboard className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                <RiDashboard3Fill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Sustainability"} />
               </div>
               <div className="flex items-center gap-4 mx-10 font-light">
@@ -201,7 +203,7 @@ const VirtualFieldProbing = () => {
                 <BulletPointIcon text={"Socioeconomic Mapping"} />
               </div>
               <div className="flex items-center gap-4 mx-10 font-light">
-                <AiFillDollarCircle className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
+                <RiMoneyDollarCircleFill className="flex-shrink-0 mx-2 text-4xl text-vais-pri" />
                 <BulletPointIcon text={"Security and Surveillance"} />
               </div>
               <div className="flex items-center gap-4 mx-10 font-light">
