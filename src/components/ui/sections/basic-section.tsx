@@ -92,7 +92,7 @@ const BasicSectionDescription: React.FC<BasicSectionDescriptionProps> = ({
   return (
     <p
       className={cn(
-        `text-sm xl:text-base leading-loose text-gray-500 text-start md:text-justify`,
+        `text-sm xl:text-lg leading-loose text-gray-500 text-start md:text-justify`,
         className
       )}
       {...rest}
