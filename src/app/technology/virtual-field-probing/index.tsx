@@ -68,7 +68,7 @@ const VirtualFieldProbing = () => {
   };
 
   return (
-    <main className="flex flex-col space-y-8">
+    <main className="flex flex-col">
       <HeroSection background="/temp.png">
         <HeroTitle>Pioneering Technology</HeroTitle>
         <HeroTitle secondary>VAIS Virtual Field Probing (VFP)</HeroTitle>
@@ -152,7 +152,7 @@ const VirtualFieldProbing = () => {
         <BasicSectionImage src="/bg.png" alt="vfp showcase image" />
       </BasicSection>
 
-      <div className="flex flex-col items-center justify-center w-full gap-4">
+      <div className="flex flex-col items-center justify-center w-full gap-4 py-12">
         <BasicSectionTitle>
           Additional VFP Applications and Industries
         </BasicSectionTitle>

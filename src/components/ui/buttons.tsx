@@ -12,7 +12,7 @@ const buttonVariants = cva("", {
       white: "bg-white text-black font-light",
     },
     size: {
-      default: "h-14 px-4 rounded-md py-2",
+      default: "h-12 px-5 rounded-md my-4",
       sm: "h-9 rounded-md px-3",
       lg: "h-11 rounded-md px-8",
       icon: "h-8 w-8",

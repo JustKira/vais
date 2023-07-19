@@ -147,7 +147,7 @@ const Navbar = () => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className={`fixed top-0 flex justify-center w-full z-50 ${
-        scrolledPastThreshold || hover
+        scrolledPastThreshold || hover || mve
           ? " bg-white drop-shadow-md delay-75 text-black"
           : " bg-transparent text-white"
       }  transition-all duration-300 `}

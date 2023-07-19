@@ -34,7 +34,7 @@ const RootPage = () => {
       JSX.push(
         <Button
           variant={i === hsp ? "default" : "outline"}
-          className="w-[10vw] h-2 rounded-full"
+          className="w-[7vw] h-2 rounded-full"
           onClick={() => {
             setHsp(i);
           }}

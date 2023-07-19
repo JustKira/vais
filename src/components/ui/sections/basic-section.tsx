@@ -16,7 +16,7 @@ const BasicSection: React.FC<BasicSectionProps> = ({
   ...rest
 }) => {
   return (
-    <div className="flex items-center justify-center w-full py-12 bg-white">
+    <div className="flex items-center justify-center w-full py-10 bg-white">
       <section
         className={cn(
           `container flex gap-4 justify-between items-center ${
@@ -47,7 +47,7 @@ const BasicSectionContent: React.FC<BasicSectionContentProps> = ({
 }) => {
   return (
     <div
-      className={cn(`flex flex-col space-y-4 w-3/4 xl:w-1/2`, className)}
+      className={cn(`flex flex-col gap-3 w-3/4 xl:w-1/2`, className)}
       {...rest}
     >
       {children}

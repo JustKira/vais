@@ -30,7 +30,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       >
         {children}
       </div>
-      <div className="relative w-full h-16 mb-4 bg-dotted-spacing-2 bg-dotted-vais-pri">
+      <div className="relative w-full h-16 bg-dotted-spacing-2 bg-dotted-vais-pri">
         <div className="absolute bottom-0 w-full h-16 bg-gradient-to-t from-white via-white/75 to-white/50" />
       </div>
     </div>
