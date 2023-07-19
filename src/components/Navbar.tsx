@@ -1,6 +1,6 @@
 import { CgDetailsMore } from "react-icons/cg";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts";
 
 interface NavbarLinks {
@@ -58,6 +58,7 @@ const NavbarLinks: NavbarLinks[] = [
 const Navbar = () => {
   const [mve, setMve] = useState<boolean>(false);
   const matches = useMediaQuery("(min-width: 640px)");
+  const location = useLocation();
   const [scrolledPastThreshold, setScrolledPastThreshold] =
     React.useState(false);
   const handleScroll = () => {
@@ -76,6 +77,10 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  React.useEffect(() => {
+    setMve(false);
+  }, [location]);
 
   const NavbarRender = () => {
     return (
