@@ -156,7 +156,7 @@ const VirtualFieldProbing = () => {
         <BasicSectionTitle>
           Additional VFP Applications and Industries
         </BasicSectionTitle>
-        <div className="w-full py-2 text-2xl">
+        <div className="w-full py-6 text-2xl">
           <div className="relative flex overflow-x-hidden ">
             <div className="absolute top-0 bottom-0 z-50 w-1/3 h-full bg-gradient-to-r from-white to-transparent"></div>
             <div className="absolute top-0 bottom-0 right-0 z-50 w-1/3 h-full bg-gradient-to-l from-white to-transparent"></div>
