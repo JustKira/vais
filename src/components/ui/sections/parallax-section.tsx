@@ -6,17 +6,23 @@ interface ParallaxSectionProps
     HTMLElement
   > {
   src: string;
+  mini?: boolean;
 }
 
 const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   children,
   className,
   src,
+  mini,
   ...rest
 }) => {
   return (
     <>
-      <div className="flex items-center justify-center w-full bg-transparent min-h-[500px] text-white">
+      <div
+        className={`flex items-center justify-center w-full bg-transparent ${
+          mini ? "min-h-[350px]" : "min-h-[500px]"
+        } text-white`}
+      >
         <section
           className={cn(
             `container flex flex-col gap-4 justify-between items-center `,
