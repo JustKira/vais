@@ -14,8 +14,12 @@ const NavbarLinks: NavbarLinks[] = [
     name: "Technology",
     children: [
       {
-        name: "virtual-field-probing",
+        name: "virtual field probing",
         link: "/technology/virtual-field-probing",
+      },
+      {
+        name: "soil moister",
+        link: "/technology/soil-moister",
       },
     ],
   },

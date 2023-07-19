@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootPage from "./app/root";
 import Layout from "./app/layout";
 import VirtualFieldProbing from "./app/technology/virtual-field-probing";
+import SoilMoister from "./app/technology/soil-moisture";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
         path: "technology",
         children: [
           { path: "virtual-field-probing", element: <VirtualFieldProbing /> },
+          { path: "soil-moister", element: <SoilMoister /> },
         ],
       },
 
